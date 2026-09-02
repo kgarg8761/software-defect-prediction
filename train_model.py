@@ -4,16 +4,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
-
-
 data = pd.read_csv("kc1_cleaned.csv")
-
-
 
 X = data.drop("defects", axis=1)
 y = data["defects"]
-
-
 
 X_train, X_test, y_train, y_test = train_test_split(
     X,
@@ -23,41 +17,27 @@ X_train, X_test, y_train, y_test = train_test_split(
     stratify=y
 )
 
-
-
 model = RandomForestClassifier(
     n_estimators=100,
     random_state=42
 )
-
-
-
 model.fit(X_train, y_train)
-
 
 print("Model trained successfully!")
 
-
-
 y_pred = model.predict(X_test)
-
-
 
 accuracy = accuracy_score(y_test, y_pred)
 
-print("\n========== MODEL PERFORMANCE ==========")
+print("\nMODEL PERFORMANCE")
 
 print("Accuracy:", round(accuracy * 100, 2), "%")
 
-
-
-print("\n========== CLASSIFICATION REPORT ==========")
+print("\nCLASSIFICATION REPORT")
 
 print(classification_report(y_test, y_pred))
 
-
-
-print("\n========== CONFUSION MATRIX ==========")
+print("\nCONFUSION MATRIX")
 
 cm = confusion_matrix(y_test, y_pred)
 
