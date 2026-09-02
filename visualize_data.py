@@ -2,10 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Load cleaned dataset
 data = pd.read_csv("kc1_cleaned.csv")
 
-# 1. Defect Distribution
 plt.figure(figsize=(6, 4))
 sns.countplot(x="defects", data=data)
 
@@ -18,7 +16,6 @@ plt.show()
 plt.close()
 
 
-# 2. Lines of Code vs Defects
 plt.figure(figsize=(7, 5))
 sns.boxplot(x="defects", y="loc", data=data)
 
@@ -31,7 +28,6 @@ plt.show()
 plt.close()
 
 
-# 3. Complexity vs Defects
 plt.figure(figsize=(7, 5))
 sns.boxplot(x="defects", y="v(g)", data=data)
 
@@ -44,7 +40,6 @@ plt.show()
 plt.close()
 
 
-# 4. Correlation Heatmap
 plt.figure(figsize=(12, 8))
 
 correlation = data.corr()
