@@ -15,7 +15,6 @@ plt.savefig("defect_distribution.png")
 plt.show()
 plt.close()
 
-
 plt.figure(figsize=(7, 5))
 sns.boxplot(x="defects", y="loc", data=data)
 
@@ -27,7 +26,6 @@ plt.savefig("loc_vs_defects.png")
 plt.show()
 plt.close()
 
-
 plt.figure(figsize=(7, 5))
 sns.boxplot(x="defects", y="v(g)", data=data)
 
@@ -38,7 +36,6 @@ plt.ylabel("Cyclomatic Complexity")
 plt.savefig("complexity_vs_defects.png")
 plt.show()
 plt.close()
-
 
 plt.figure(figsize=(12, 8))
 
