@@ -1,6 +1,6 @@
 import pandas as pd
 
-data = pd.read_csv("kc1.csv")
+data = pd.read_csv("01-kc1.csv")
 
 print("DATASET INFORMATION")
 print(data.info())

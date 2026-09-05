@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-data = pd.read_csv("kc1_cleaned.csv")
+data = pd.read_csv("06-kc1_cleaned.csv")
 
 X = data.drop("defects", axis=1)
 y = data["defects"]

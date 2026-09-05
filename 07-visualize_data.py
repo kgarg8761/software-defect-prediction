@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-data = pd.read_csv("kc1_cleaned.csv")
+data = pd.read_csv("06-kc1_cleaned.csv")
 
 plt.figure(figsize=(6, 4))
 sns.countplot(x="defects", data=data)
